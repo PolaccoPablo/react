@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link }      from 'react-router-dom'
 export default function Item({id, nombre, precio, img, stock}) {
   return (
     <article className='CardItem'>
@@ -17,7 +17,7 @@ export default function Item({id, nombre, precio, img, stock}) {
                 Stock disponible: {stock}
             </p>
             <footer className='ItemFooter'>
-                <button className='Option'>Ver detalle</button>
+                <button className='Option'><Link to={`/item/${id}`}>Ver detalle</Link></button>
             </footer>
         </section>
     </article>
