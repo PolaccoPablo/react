@@ -1,14 +1,15 @@
+import '../Item/Item.css'
 import React from 'react'
 import ItemCount from '../ItemCount/ItemCount'
 
 export default function ItemDetail({id, categoria, nombre, precio, stock, img}) {
   return (
-    <article className='CardItem'>
+    <article className='card CardItemDetail'>
     <header className='Hader'>
     <h2 className='ItemHeader'>{nombre}</h2>
     </header>
     <picture>
-        <img src={img} alt={nombre} className='ItemImg' />
+        <img src={img} alt={nombre} className='imgprod' />
     </picture>
     <section>
         <p className='Info'>

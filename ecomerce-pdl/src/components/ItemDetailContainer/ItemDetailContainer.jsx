@@ -9,7 +9,7 @@ export default function ItemDetailContainer() {
     const {itemId} = useParams()
     const [product, setProduct] = useState({})
     useEffect(() => {
-        const getProductById = (itemId) => {
+        const getProductById = async (itemId) => {
             // axios.get("https://raw.githubusercontent.com/PolaccoPablo/archivos/main/productos.json")
             //     .then(response => {
             //         console.log(response.data.productosAlaventa.filter(p => p.id === parseInt(productId)))
@@ -18,12 +18,12 @@ export default function ItemDetailContainer() {
             //     .catch(error => {
             //         console.error(error)
             //     })
-
-            const getProductById = async (itemId) => {
+// VER QUE TODAVIA TIRA ERROR...
+            
                 try {
                     const productDoc = await getDoc(doc(db, "productos", itemId));
                     if (productDoc.exists()) {
-                        
+
                         setProduct({ id: productDoc.id, ...productDoc.data() });
                     } else {
                         console.log("No existe el producto!");
@@ -31,7 +31,7 @@ export default function ItemDetailContainer() {
                 } catch (error) {
                     console.error("Error al buscar el documento:", error);
                 }
-            };
+            
         }
         getProductById(itemId)
     }, [])

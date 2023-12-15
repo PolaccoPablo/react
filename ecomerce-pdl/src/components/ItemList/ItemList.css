@@ -1,0 +1,6 @@
+.ListGroup {
+    background-color: rgb(255, 248, 232);
+    display:  -webkit-inline-box;
+    flex-direction: column;
+    justify-content: center;
+  }
