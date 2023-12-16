@@ -1,8 +1,24 @@
 import '../Item/Item.css'
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import ItemCount from '../ItemCount/ItemCount'
+import { CartContext } from '../Contex/CartContex'  
+
 
 export default function ItemDetail({id, categoria, nombre, precio, stock, img}) {
+
+    const [quantityAdded, setQuantityAdded] = useState (0)
+        const {addItem} = useContext (CartContext)
+
+const handleOnAdd = (quantity) => {
+    setQuantityAdded (quantity)
+
+    const item = {
+        id, nombre, precio
+    }
+
+    addItem (item, quantity)
+}
+
   return (
     <article className='card CardItemDetail'>
     <header className='Hader'>
