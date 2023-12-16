@@ -35,7 +35,7 @@ const handleOnAdd = (quantity) => {
             Stock disponible: {stock}
         </p>
         <footer className='ItemFooter'>
-            <ItemCount Initial={1} stock={stock} onAdd={(quantity) => console.log("cantidad agregada ", quantity)} />
+            <ItemCount Initial={1} stock={stock} onAdd={(quantity) => handleOnAdd(quantity)} />
         </footer>
     </section>
 </article>

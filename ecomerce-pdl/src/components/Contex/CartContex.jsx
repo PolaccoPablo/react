@@ -5,11 +5,11 @@ export const CartContext = createContext({
 })
 
 export const CartProvider = ({children}) => {
-    conts [cart, setCart] = useState([])
+    const [cart, setCart] = useState([])
 
 const addItem = (item, quantity) => {
     if (!isInCart(item.id)) {
-        setcart (itemsPrev => [...itemsPrev, {...item, quantity}])
+        setCart (itemsPrev => [...itemsPrev, {...item, quantity}])
     }
     else {
         console.error ('El producto ya fue agregado') /// hacerlo con sweet alert
@@ -19,7 +19,7 @@ const addItem = (item, quantity) => {
 
 const removeItem = (itemId) => {
     const cartUpdated = cart.filter(prod => prod.id !== itemId)
-
+    setCart(cartUpdated)
 }
 
 const clearCart = () => {

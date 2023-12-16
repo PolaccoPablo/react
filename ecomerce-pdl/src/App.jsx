@@ -9,7 +9,7 @@ function App() {
   return (
   
       <BrowserRouter>
-        {/* <CartProvider> */}
+        <CartProvider>
           <Navbar />
           <Routes>
             <Route path='/' element={<ItemListContainer props={"Productos"}/>} />
@@ -17,7 +17,7 @@ function App() {
             <Route path='/item/:itemId' element={<ItemDetailContainer/>}/>
             <Route path='*' element ={<h1>404 Not Found</h1>}/>
           </Routes>
-        {/* </CartProvider> */}
+        </CartProvider>
       </BrowserRouter>
 
     
