@@ -3,9 +3,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 export default function Item({ id, nombre, precio, img, stock }) {
     return (
-        <article className='Card CardItem'>
+        <article className='card CardItem'>
             <header className='Hader'>
-                <h2 className='ItemHeader'>{nombre}</h2>
+                <h5 className='ItemHeader'>{nombre}</h5>
             </header>
             <picture>
                 <img src={img} alt={nombre} className='imgprod' />
