@@ -37,9 +37,10 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
+      <CarWidget/>
     </div>
   </nav>
-  <CarWidget/>
+  <br/>
   </>
   )
 

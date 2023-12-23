@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react"
-import axios from 'axios'
+import { useEffect, useState } from 'react'
+//import axios from 'axios'
 import ItemList from "../ItemList/ItemList"
 import { useParams } from "react-router"
 import { db } from "../../firebase/client"
-import { collection, doc, getDoc, getDocs, query, where, limit, addDoc, updateDoc } from "firebase/firestore"
+import { collection, getDocs} from "firebase/firestore"
 
 
 const ItemListContainer = ({props}) => {
@@ -24,7 +24,6 @@ const ItemListContainer = ({props}) => {
                 getDocs(productosCollection)
                 .then ((snapshot)=> {
                     let datos = snapshot.docs.map((doc)=>({id: doc.id, ...doc.data()}));
-                    console.log(datos)
                     categoria ? setProducts(datos.filter(p => p.categoria === categoria)) : setProducts(datos);
                 })
                 .catch (error=>{
