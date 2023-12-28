@@ -1,8 +1,8 @@
-# React + Vite
+# PDL
+Pócima de luna es un emprendimiento de venta de insumos aromáticos. Entre los productos que ofrece hay sahumerios, sahumos, kits de limpieza energética, fragancias para autos, adornos entre otros.
+Se elaboró el siguiente prototipo de e-commerce con la utilización de las siguientes herramientas:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-[] React + Vite para la creación del sitio y su visualización en desarrollo.
+-[] Firebase para el almanamiento de los productos disponibles y las órdenes de compra
+-[] Css para dar estilos específicos
+-[] Boostrap para estilos de botones, formularios, navbar
