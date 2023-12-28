@@ -17,6 +17,7 @@ function App() {
             <Route path='/category/:categoryId' element={<ItemListContainer props={"Productos por categoria"}/>} />
             <Route path='/item/:itemId' element={<ItemDetailContainer/>}/>
             <Route path='/cart' element = {<CartView/>}/>
+            <Route path='/checkout' element={<Checkout />}/>
             <Route path='*' element ={<h1>404 Not Found</h1>}/>
           </Routes>
         </CartProvider>
